@@ -28,7 +28,7 @@ const App = () => {
     {id: Date.now() + 2, title: 'Buy groceries for the week', statue: false},
     {
       id: Date.now() + 3,
-      title: 'Schedule team meeting for Monday team meeting for Monday',
+      title: 'Schedule team meeting',
       statue: false,
     },
     {id: Date.now() + 4, title: 'Work out for 30 minutes', statue: false},
@@ -226,7 +226,7 @@ const App = () => {
                 ) : (
                   <View style={{width: 260}}>
                     <Text style={style.texts}>{item.title}</Text>
-                    <Text style={style.texts}>
+                    <Text style={style.hintTexts}>
                       {formatDateFromTimestamp(item.id)}
                     </Text>
                   </View>
@@ -402,6 +402,10 @@ const style = StyleSheet.create({
   texts: {
     color: 'black',
     fontSize: 18,
+  },
+  hintTexts: {
+    color: 'grey',
+    fontSize: 14,
   },
   textWhite: {
     color: 'white',
